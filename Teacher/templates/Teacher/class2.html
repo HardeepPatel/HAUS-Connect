@@ -1,0 +1,12 @@
+{% extends "Teacher/base.html" %}
+
+{% block title %} Class {% endblock %}
+
+{% block content %} Schedule a new class
+<form method="POST" action="/class/">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit",name="save"> create new </button>
+
+</form>
+{% endblock %}
